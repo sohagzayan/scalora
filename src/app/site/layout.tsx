@@ -1,3 +1,5 @@
+
+import SmoothScroll from '@/components/animation/SmoothScroll'
 import Navigation from '@/components/site/navigation'
 import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes'
@@ -7,10 +9,13 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ClerkProvider
       appearance={{ baseTheme: dark }}>
+      {/* <SmoothScroll> */}
       <main className="h-full">
         <Navigation />
         {children}
       </main>
+      {/* </SmoothScroll> */}
+
     </ClerkProvider>
   )
 }

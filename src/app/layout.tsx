@@ -24,6 +24,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
+      className='!scroll-smooth'
     >
       <body className={font.className}>
         <ThemeProvider
