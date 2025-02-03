@@ -12,6 +12,7 @@ import clsx from 'clsx'
 import { Check } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import WeStandFor from './components/WeStandFor'
 
 export default async function Home() {
 
@@ -152,6 +153,7 @@ export default async function Home() {
           </Card>
         </div>
       </section>
+      <WeStandFor />
     </>
   )
 }
