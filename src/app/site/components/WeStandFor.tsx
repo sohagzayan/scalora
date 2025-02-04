@@ -51,7 +51,7 @@ export default function WeStandFor() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <p className="text-[18px] mb-2 text-[hsl(154.9,100%,19.2%)]
+                    <p className="text-[18px] mb-2 text-[hsl(153.1,60.2%,52.7%)]
 ">As Agency Solution Provider</p>
                     WHAT WE STAND FOR
                 </motion.h1>
