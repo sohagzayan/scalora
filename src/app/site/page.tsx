@@ -14,7 +14,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import WeStandFor from './components/WeStandFor'
 import WebsiteExperts from './components/WebsitesExperts'
-import CustomerStories from './components/CustomerStories'
+import { MarqueeDemo } from './components/CustomerStories'
 
 export default async function Home() {
 
@@ -157,7 +157,7 @@ export default async function Home() {
       </section>
       <WeStandFor />
       <WebsiteExperts />
-      <CustomerStories />
+      <MarqueeDemo />
     </>
   )
 }

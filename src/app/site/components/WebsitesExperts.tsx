@@ -57,7 +57,7 @@ export default function WebsiteExperts() {
     ]
 
     return (
-        <div className="min-h-screen bg-black text-white py-16 px-4 sm:px-6 lg:px-8 font-[Inter]">
+        <div className=" text-white py-16 px-4 sm:px-6 lg:px-8 font-[Inter]">
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24">
                 <div className="space-y-12">
                     <div className="space-y-6">
