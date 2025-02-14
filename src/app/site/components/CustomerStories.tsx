@@ -3,91 +3,97 @@ import { Marquee } from "@/components/ui/marquee";
 
 const reviews = [
     {
-        name: "Jack",
-        username: "@jack",
-        body: "I've never seen anything like this before. It's amazing. I love it.",
-        img: "https://avatar.vercel.sh/jack",
+        logo: "Quivr",
+        description: "AI-powered knowledge base grows exponentially with Supabase.",
+        imgUrl: "/logos/quivr.svg",
     },
     {
-        name: "Jill",
-        username: "@jill",
-        body: "I don't know what to say. I'm speechless. This is amazing.",
-        img: "https://avatar.vercel.sh/jill",
+        logo: "1Password",
+        description: "Securing user data at scale with Supabase Authentication.",
+        imgUrl: "/logos/1password.svg",
     },
     {
-        name: "John",
-        username: "@john",
-        body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/john",
+        logo: "maergo",
+        description: "Maergo's Express Delivery: How Supabase Helped Achieve Scalability, Speed, and Cost Saving.",
+        imgUrl: "/logos/maergo.svg",
     },
     {
-        name: "Jane",
-        username: "@jane",
-        body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/jane",
+        logo: "SHOTGUN",
+        description: "Media production platform chooses Supabase for real-time collaboration.",
+        imgUrl: "/logos/shotgun.svg",
     },
     {
-        name: "Jenny",
-        username: "@jenny",
-        body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/jenny",
+        logo: "Chatbase",
+        description: "Bootstrapped founder builds an AI app with Supabase and scales to $1M in 5 months.",
+        imgUrl: "/logos/chatbase.svg",
     },
     {
-        name: "James",
-        username: "@james",
-        body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/james",
+        logo: "mozilla",
+        description: "Mozilla leverages Supabase for a fast and scalable database solution.",
+        imgUrl: "/logos/mozilla.svg",
+    },
+    {
+        logo: "Tinloof",
+        description: "Development agency builds scalable solutions with Supabase.",
+        imgUrl: "/logos/tinloof.svg",
+    },
+    {
+        logo: "Next Door Lending",
+        description: "Mortgage lending company scales operations seamlessly with Supabase.",
+        imgUrl: "/logos/nextdoor.svg",
+    },
+    {
+        logo: "Mobbin",
+        description: "Design library platform chooses Supabase to power their application.",
+        imgUrl: "/logos/mobbin.svg",
+    },
+    {
+        logo: "HappyTeams",
+        description: "Team management platform leverages Supabase for real-time collaboration.",
+        imgUrl: "/logos/happyteams.svg",
     },
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-const ReviewCard = ({
-    img,
-    name,
-    username,
-    body,
-}: {
-    img: string;
-    name: string;
-    username: string;
-    body: string;
-}) => {
+const ReviewCard = ({ logo, description, imgUrl }: { logo: string; description: string; imgUrl: string }) => {
     return (
-        <figure
-            className={cn(
-                "relative w-72 cursor-pointer overflow-hidden rounded-xl border p-4 ",
-                // light styles
-                "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-                // dark styles
-                "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-            )}
-        >
-            <div className="flex flex-row items-center gap-2">
-                <img className="rounded-full" width="32" height="32" alt="" src={img} />
-                <div className="flex flex-col">
-                    <figcaption className="text-sm font-medium dark:text-white">
-                        {name}
-                    </figcaption>
-                    <p className="text-xs font-medium dark:text-white/40">{username}</p>
-                </div>
-            </div>
-            <blockquote className="mt-2 text-sm">{body}</blockquote>
-        </figure>
+        <div className="relative w-[300px] h-[180px] cursor-pointer overflow-hidden rounded-xl border border-gray-800 bg-gray-900 p-6 flex flex-col justify-between hover:bg-gray-800 transition-colors">
+            <img src={imgUrl} alt={logo} className="w-24 h-auto opacity-80" />
+            <p className="text-sm text-gray-400 mt-4">{description}</p>
+        </div>
     );
 };
 
 export function MarqueeDemo() {
     return (
-        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  !bg-transparent ">
+        <div className="relative flex flex-col items-center justify-center w-full overflow-hidden py-14">
+            <div className="text-center mb-12">
+                <span className="text-sm font-medium text-gray-400">CUSTOMER STORIES</span>
+                <h1 className="text-4xl font-semibold text-white mt-2">
+                    Infrastructure to <span className="text-gray-400">innovate and scale with ease.</span>
+                </h1>
+                <p className="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
+                    See how Supabase empowers companies of all sizes to accelerate their growth and streamline their work.
+                </p>
+                <div className="mt-6 flex gap-4 justify-center">
+                    <button className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md">View all stories</button>
+                    <button className="px-6 py-2 border border-gray-700 bg-transparent text-white hover:bg-gray-800 rounded-md">View Events</button>
+                </div>
+            </div>
             <Marquee reverse pauseOnHover className="[--duration:20s]">
-                {secondRow.map((review) => (
-                    <ReviewCard key={review.username} {...review} />
+                {firstRow.map((review) => (
+                    <ReviewCard key={review.logo} {...review} />
                 ))}
             </Marquee>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+            <Marquee pauseOnHover className="[--duration:25s] mt-4">
+                {secondRow.map((review) => (
+                    <ReviewCard key={review.logo} {...review} />
+                ))}
+            </Marquee>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black"></div>
         </div>
     );
 }
