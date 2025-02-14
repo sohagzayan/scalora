@@ -15,6 +15,9 @@ import Link from 'next/link'
 import WeStandFor from './components/WeStandFor'
 import WebsiteExperts from './components/WebsitesExperts'
 import { MarqueeDemo } from './components/CustomerStories'
+import TemplatesSection from './components/TemplatesSection'
+import { Community } from './components/Community'
+import { Footer } from '@/components/common/Footer/Footer'
 
 export default async function Home() {
 
@@ -158,6 +161,9 @@ export default async function Home() {
       <WeStandFor />
       <WebsiteExperts />
       <MarqueeDemo />
+      <TemplatesSection />
+      <Community />
+      <Footer />
     </>
   )
 }
