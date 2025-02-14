@@ -163,7 +163,6 @@ export default async function Home() {
       <MarqueeDemo />
       <TemplatesSection />
       <Community />
-      <Footer />
     </>
   )
 }

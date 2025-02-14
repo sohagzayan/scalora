@@ -5,6 +5,11 @@ import { ThemeProvider } from '@/providers/theme-provider'
 import ModalProvider from '@/providers/modal-provider'
 import { Toaster } from '@/components/ui/toaster'
 import { Toaster as SonnarToaster } from '@/components/ui/sonner'
+import Navigation from '@/components/site/navigation'
+import { ClerkProvider } from '@clerk/nextjs'
+import { dark } from '@clerk/themes'
+
+
 
 const font = DM_Sans({ subsets: ['latin'] })
 
