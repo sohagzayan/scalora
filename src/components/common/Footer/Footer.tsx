@@ -1,4 +1,16 @@
+"use client"
+
+import { usePathname } from "next/navigation";
+
+
 export function Footer() {
+    const pathname = usePathname()
+
+
+    if (pathname.includes("sign-in")) {
+        return
+    }
+
     return (
         <footer className="bg-black text-gray-400 py-10 px-6">
             <div className="max-w-6xl mx-auto text-center border-b border-gray-700 pb-6">

@@ -14,6 +14,11 @@ type Props = {
 const Navigation = ({ user }: Props) => {
   const pathname = usePathname();
 
+
+  if (pathname.includes("sign-in")) {
+    return
+  }
+
   return (
     <div className="fixed z-50 top-0 right-0 left-0 p-4 flex items-center justify-between">
       <aside className="flex items-center gap-2">
