@@ -2,7 +2,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { HoverEffect } from "../../../components/ui/card-hover-effect";
 
 const templates = [

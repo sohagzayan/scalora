@@ -73,7 +73,8 @@ export function Community() {
                                 <div>
                                     <p className="text-sm font-semibold">@justinjunodev</p>
                                     <p className="mt-1 text-gray-300 text-sm leading-relaxed">
-                                        Yall <span className="text-blue-400">@supabase</span> + <span className="text-blue-400">@nextjs</span> is amazing! 🙌 Barely an hour into a proof-of-concept and already have most of the functionality in place. 🤯🤯🤯"
+                                        Yall <span className="text-blue-400">@supabase</span> + <span className="text-blue-400">@nextjs</span> is amazing! 🙌 Barely an hour into a proof-of-concept and already have most of the functionality in place.
+
                                     </p>
                                 </div>
                             </CardContent>
